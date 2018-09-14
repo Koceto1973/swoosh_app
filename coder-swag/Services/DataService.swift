@@ -13,7 +13,7 @@ class DataService{
     // singleton , one provider to feed our data
     static let instance = DataService()
     
-    // our data
+    // our data stored privately
     private let categories = [
         Category(title: "SHIRTS", imageName: "shirts.png"),
         Category(title: "HOODIES", imageName: "hoodies.png"),
