@@ -13,6 +13,8 @@
 		35752AE5214BDED800781FFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35752AE4214BDED800781FFE /* Assets.xcassets */; };
 		35752AE8214BDED800781FFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35752AE6214BDED800781FFE /* LaunchScreen.storyboard */; };
 		35752AF4214BEA7600781FFE /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35752AF3214BEA7600781FFE /* CategoryCell.swift */; };
+		35752AF6214BF21C00781FFE /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35752AF5214BF21C00781FFE /* Category.swift */; };
+		35752AF9214BF3B000781FFE /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35752AF8214BF3B000781FFE /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		35752AE7214BDED800781FFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35752AE9214BDED800781FFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35752AF3214BEA7600781FFE /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		35752AF5214BF21C00781FFE /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		35752AF8214BF3B000781FFE /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		35752ADC214BDED600781FFE /* coder-swag */ = {
 			isa = PBXGroup;
 			children = (
+				35752AF7214BF37A00781FFE /* Services */,
 				35752AF2214BE27F00781FFE /* Model */,
 				35752AF1214BE26900781FFE /* View */,
 				35752AF0214BE25800781FFE /* Controller */,
@@ -87,8 +92,17 @@
 		35752AF2214BE27F00781FFE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				35752AF5214BF21C00781FFE /* Category.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		35752AF7214BF37A00781FFE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				35752AF8214BF3B000781FFE /* DataService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +179,8 @@
 				35752AE0214BDED600781FFE /* CategoriesVC.swift in Sources */,
 				35752ADE214BDED600781FFE /* AppDelegate.swift in Sources */,
 				35752AF4214BEA7600781FFE /* CategoryCell.swift in Sources */,
+				35752AF6214BF21C00781FFE /* Category.swift in Sources */,
+				35752AF9214BF3B000781FFE /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
