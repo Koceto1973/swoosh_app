@@ -10,6 +10,8 @@ import UIKit
 
 class CategoriesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var categoryTable:UITableView!
+    
     // returns number of categories
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return DataService.instance.getCategories().count
@@ -28,8 +30,25 @@ class CategoriesVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         }
     }
     
+    func tableView(_ tableView:UITableView, didSelectRowAt indexPath: IndexPath){
+        let category = DataService.instance.getCategories()[indexPath.row]
+        performSegue(withIdentifier: "ProductsVC", sender: category)
+        }
     
-    @IBOutlet weak var categoryTable:UITableView!
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let productVC = segue.destination as? ProductsVC{
+            
+            let barBtn = UIBarButtonItem()
+            barBtn.title = ""
+            navigationItem.backBarButtonItem = barBtn
+            
+            assert(sender as? Category != nil ) // safe measure only for build time
+            productVC.initProducts(category: sender as! Category)
+            
+            
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,11 +57,6 @@ class CategoriesVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         categoryTable.delegate = self
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+    
 }
 
