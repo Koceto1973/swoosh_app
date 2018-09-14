@@ -13,6 +13,7 @@ class CategoriesVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     // returns number of categories
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return DataService.instance.getCategories().count
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
